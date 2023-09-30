@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Epilogue:wght@500&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Red+Hat+Display:wght@500;700;900&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Red+Hat+Display:wght@500;700;900&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+    /* max-height: 100vh; */
+    overflow-y: hidden;
+    font-family: Epilogue;
+    background-color: hsl(0, 0%, 98%);
+}
+/* nav bar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+nav ul{
+    list-style: none;
+    font-size: 0.9rem;
+    color: hsl(0, 0%, 41%);
+}
+nav .cover{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.cover .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover .logo img{
+    width: 100%;
+    height: 100%;
+}
+nav .menulist{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav .menulist li{
+    margin-left: 40px;
+}
+nav .menulist>li:hover{
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+}
+nav .menulist .ft .uparrow{
+    display: none;
+    cursor: pointer;
+}
+nav .menulist .ft .downarrow{
+    cursor: pointer;
+}
+nav .menulist .ft .uparrow.active{
+    display: inline;
+}
+nav .menulist .ft .downarrow.remove{
+    display: none;
+}
+nav .menulist .ft .downarrow.active{
+    display: inline;
+}
+
+nav .menulist .features{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 8%;
+    left: 6%;
+    padding: 15px 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+nav .menulist .features.active-open{
+    display: flex;
+}
+
+nav .menulist .features li{
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+nav .menulist .features li img{
+    width: 15px;
+    height: 16px;
+}
+/* company */
+nav .menulist .company{
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 18.5%;
+    top: 8%;
+}
+nav .menulist .company li{
+    margin: 0;
+    padding: 5px 0;
+}
+nav .menulist .cp .up-arrow{
+    display: none;
+    cursor: pointer;
+}
+nav .menulist .cp .down-arrow{
+    cursor: pointer;
+}
+nav .menulist .company.active-open{
+    display: flex;
+}
+nav .menulist .cp .up-arrow.active-up{
+    display: inline;
+}
+nav .menulist .cp .down-arrow.remove-down{
+    display: none;
+}
+/* nav button */
+nav .button{
+    display: flex;
+    gap: 20px;
+}
+.button button{
+    padding: 6px 10px;
+    color: hsl(0, 0%, 41%);
+}
+.button .login{
+    border: 0;
+    background-color: hsl(0, 0%, 98%);
+}
+.button .register{
+    border-radius: 8px;
+    border: 1px solid hsl(0, 0%, 41%);
+    background-color: hsl(0, 0%, 98%);
+}
+.button .login:hover{
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+}
+.button .register:hover{
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+    border: 1.7px solid hsl(0, 0%, 8%);
+}
+.button .side{
+    display: none;
+}
+/* menu icon */
+nav .menu-icon{
+    display: none;
+}
+nav .menu-icon img{
+    width: 100%;
+}
+/* menu close-icon */
+nav .button .close-icon{
+    display: none;
+}
+/* main content */
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.wrapper .coverpage{
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: right;
+}
+.wrapper .coverpage .content{
+    margin-top: 30px;
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.wrapper .content h1{
+    margin-top: 55px;
+    margin-bottom: 0;
+    font-size: 4.1rem;
+    max-width: 85%;
+}
+.wrapper .content p{
+    margin: 0;
+    max-width: 75%;
+    align-self: flex-start;
+    line-height: 22px;
+    color: hsl(0, 0%, 41%);
+}
+.wrapper .content .learnmore{
+    align-self: flex-start;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 0;
+    background-color: black;
+    color: white;
+}
+.wrapper .content .learnmore:hover{
+    cursor: pointer;
+    background-color: hsl(0, 0%, 98%);
+    border: 1px solid black;
+    color: black;
+}
+.wrapper .content .companylogo{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper .content .companylogo img{
+    width: 100%;
+}
+.wrapper .picture{
+    flex: 1 1 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.wrapper .picture img{
+    width: 65%;
+    height: 75%;
+}
+/* black screen */
+.blackscreen{
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.562);
+}
+.blackscreen.black{
+    display: block;
+    z-index: 1;
+}
+/* media query for icon */
+@media all and (max-width:750px) {
+    body{
+        overflow-y: scroll;
+    }
+    nav .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    nav .menulist{
+        display: none;
+    }
+    nav .button{
+        z-index: 2;
+        padding: 20px;
+        width: 60%;
+        height: 100vh;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: white;
+        color: hsl(0, 0%, 41%);
+    }
+    nav .button .login{
+        background-color: white;
+    }
+    nav .button .register{
+        background-color: white;
+    }
+    nav.activation .button{
+        display: flex;
+    }
+    nav .button .close-icon{
+        cursor: pointer;
+        display: block;
+        align-self: flex-end;
+    }
+    nav .button .side{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+    nav .button .side>li:hover{
+        cursor: pointer;
+        color: hsl(0, 0%, 8%);
+    }
+    /* side feature */
+    nav .button .side .sideft .sideup-arrow{
+        display: none;
+    }
+    nav .button .side .sideft .sideup-arrow.arrow-active{
+        display: inline;
+        cursor: pointer;
+    }
+    nav .button .side .sideft .sidedown-arrow.arrow-remove{
+        display: none;
+    }
+    nav .button .side .sideft .sidedown-arrow{
+        cursor: pointer;
+    }
+    nav .button .side .sidefeature{
+        margin-top: 20px;
+        display: none;
+        flex-direction: column;
+        padding: 0 0 0 20px;
+        gap: 20px;
+        
+    }
+    nav .button .side .sidefeature.sideactive{
+        display: flex;
+    }
+    nav .button .side .sidefeature li{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    nav .button .side .sidefeature li img{
+        width: 15px;
+        height: 16px;
+    }
+    /* side company */
+    nav .button .side .sidecp .sideup-arrow1{
+        display: none;
+    }
+    nav .button .side .sidecp .sideup-arrow1.sidetrue{
+        display: inline;
+        cursor: pointer;
+    }
+    nav .button .side .sidecp .sidedown-arrow1.sidefalse{
+        display: none;
+    }
+    nav .button .side .sidecp .sidedown-arrow1{
+        cursor: pointer;
+    }
+    nav .button .side .sidecompany{
+        margin-top: 20px;
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 0 0 20px;
+    }
+    nav .button .side .sidecompany.true{
+        display: flex;
+    }
+    
+}
+@media all and (max-width:550px) {
+    .wrapper{
+        flex-direction: column-reverse;
+    }
+    /* .wrapper .coverpage{
+        flex-basis: 100%;
+    }
+    .wrapper .picture{
+        flex-basis: 100%;
+    } */
+    .wrapper .coverpage .content{
+        max-width: 100%;
+        align-items: center;
+        padding: 10px 10px 50px 10px;
+        gap: 20px;
+    }
+    .wrapper .content h1{
+        font-size: 1.9rem;
+    }
+    .wrapper .content p{
+        max-width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .wrapper .content .learnmore{
+        align-self: center;
+    }
+    .wrapper .content .companylogo{
+        margin-top: 10px;
+    }
+    .wrapper .content .companylogo img{
+        width: 75%;
+    }
+    .wrapper .picture img{
+        content: url('images/image-hero-mobile.png');
+        width: 100%;
+    }
+}
